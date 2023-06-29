@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="permissionsIds">
+        <item>android.permission.CAMERA</item>
+        <item>android.permission.READ_CONTACTS</item>
+        <item>android.permission.RECORD_AUDIO</item>
+        <item>android.permission.ACCESS_FINE_LOCATION</item>
+        <item>android.permission.ACCESS_COARSE_LOCATION</item>
+        <item>android.permission.READ_SMS</item>
+        <item>android.permission.SEND_SMS</item>
+        <item>android.permission.RECEIVE_SMS</item>
+        <item>android.permission.CALL_PHONE</item>
+        <item>android.permission.READ_CALENDAR</item>
+        <item>android.permission.WRITE_CALENDAR</item>
+        <item>android.permission.READ_PHONE_STATE</item>
+        <item>android.permission.GET_ACCOUNTS</item>
+        <item>android.permission.WRITE_CONTACTS</item>
+    </string-array>
+
+    <string-array name="titles">
+        <item>Camera Permission</item>
+        <item>Read Contacts Permission</item>
+        <item>Record Audio Permission</item>
+        <item>Fine Location Permission</item>
+        <item>Coarse Location Permission</item>
+        <item>Read SMS Permission</item>
+        <item>Send SMS Permission</item>
+        <item>Receive SMS Permission</item>
+        <item>Call Phone Permission</item>
+        <item>Read Calender Permission</item>
+        <item>Write Calender Permission</item>
+        <item>Read Phone State Permission</item>
+        <item>Accounts Permission</item>
+        <item>Write Contacts Permission</item>
+    </string-array>
+
+
+    <string-array name="messages">
+        <item>Allow access to your device\'s camera to take photos and videos within the app.</item>
+        <item>This app requires Read Contacts permission to access your contacts for easy communication.</item>
+        <item>This app requires Record Audio permission to enable voice-based features for better interaction.</item>
+        <item>This app requires Fine Location permission to provide accurate location-based services.</item>
+        <item>This app requires Coarse Location permission to offer location-based features with approximate location.</item>
+        <item>This app requires access your SMS messages to provide you with relevant app features or services.</item>
+        <item>Allow the app to send SMS messages on your behalf for convenient communication.</item>
+        <item>Allow the app to receive and process incoming SMS messages for enhanced app functionality.</item>
+        <item>Enable the app to initiate phone calls directly from within the app.</item>
+        <item>This app requires access your device\'s calendar to offer scheduling and reminder features.</item>
+        <item>Grant permission to add, modify, or delete events in your device\'s calendar for better scheduling and organization.</item>
+        <item>This app requires access your device\'s phone state information for improved app performance and to provide personalized features.</item>
+        <item>Grant permission to access your device\'s accounts to enhance app integration and provide a seamless experience.</item>
+        <item>Grant permission to modify and add contacts directly from the app for a more streamlined contact management experience.</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+</resources>
