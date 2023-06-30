@@ -3,12 +3,11 @@ package com.ronlu.permissionslibrary;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-
 import android.os.Bundle;
-import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     private Permissions permissions;
+    private PermissionBuilder builder;
     private AppCompatButton CAMERA, READ_CONTACTS, RECORD_AUDIO, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, READ_SMS
             , SEND_SMS, RECEIVE_SMS, CALL_PHONE, READ_CALENDAR, WRITE_CALENDAR, READ_PHONE_STATE
             , GET_ACCOUNTS, WRITE_CONTACTS;
@@ -17,8 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // init permissions library with context, activity
         permissions = new Permissions(this, this);
+        builder = new PermissionBuilder(PermissionType.CAMERA,this)
+                .setTitle("hi")
+                .setRationaleMessage("65656565")
+                .setPositiveDialogButton("5656");
         findViews();
         initViews();
     }
@@ -41,27 +43,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void initViews() {
-        CAMERA.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.CAMERA));
-        READ_CONTACTS.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.READ_CONTACTS));
-        RECORD_AUDIO.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.RECORD_AUDIO));
-        ACCESS_FINE_LOCATION.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.ACCESS_FINE_LOCATION));
-        ACCESS_COARSE_LOCATION.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.ACCESS_COARSE_LOCATION));
-        READ_SMS.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.READ_SMS));
-        SEND_SMS.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.SEND_SMS));
-        RECEIVE_SMS.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.RECEIVE_SMS));
-        CALL_PHONE.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.CALL_PHONE));
-        READ_CALENDAR.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.READ_CALENDAR));
-        WRITE_CALENDAR.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.WRITE_CALENDAR));
-        READ_PHONE_STATE.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.READ_PHONE_STATE));
-        GET_ACCOUNTS.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.GET_ACCOUNTS));
-        WRITE_CONTACTS.setOnClickListener(v -> permissions.permissionHandler(Permissions.permissionTypes.WRITE_CONTACTS));
-
+        CAMERA.setOnClickListener(v -> permissions.requestPermission(builder));
+        READ_CONTACTS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.READ_CONTACTS, this)));
+        RECORD_AUDIO.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.RECORD_AUDIO, this)));
+        ACCESS_FINE_LOCATION.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.ACCESS_FINE_LOCATION, this)));
+        ACCESS_COARSE_LOCATION.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.ACCESS_COARSE_LOCATION, this)));
+        READ_SMS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.READ_SMS, this)));
+        SEND_SMS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.SEND_SMS, this)));
+        RECEIVE_SMS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.RECEIVE_SMS, this)));
+        CALL_PHONE.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.CALL_PHONE, this)));
+        READ_CALENDAR.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.READ_CALENDAR, this)));
+        WRITE_CALENDAR.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.WRITE_CALENDAR, this)));
+        READ_PHONE_STATE.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.READ_PHONE_STATE, this)));
+        GET_ACCOUNTS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.GET_ACCOUNTS, this)));
+        WRITE_CONTACTS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.WRITE_CONTACTS, this)));
     }
 
     @Override
-        public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-            this.permissions.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        this.permissions.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
 }

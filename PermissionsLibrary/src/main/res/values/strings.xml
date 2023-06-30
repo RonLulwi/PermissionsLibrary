@@ -1,65 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="permissionsIds">
-        <item>android.permission.CAMERA</item>
-        <item>android.permission.READ_CONTACTS</item>
-        <item>android.permission.RECORD_AUDIO</item>
-        <item>android.permission.ACCESS_FINE_LOCATION</item>
-        <item>android.permission.ACCESS_COARSE_LOCATION</item>
-        <item>android.permission.READ_SMS</item>
-        <item>android.permission.SEND_SMS</item>
-        <item>android.permission.RECEIVE_SMS</item>
-        <item>android.permission.CALL_PHONE</item>
-        <item>android.permission.READ_CALENDAR</item>
-        <item>android.permission.WRITE_CALENDAR</item>
-        <item>android.permission.READ_PHONE_STATE</item>
-        <item>android.permission.GET_ACCOUNTS</item>
-        <item>android.permission.WRITE_CONTACTS</item>
+    <string-array name="rationaleMessage_array">
+        <item>We require access to your calendar to provide you with personalized reminders and scheduling options. Granting this permission will enhance your experience and help you stay organized.</item>
+        <item>To create and edit events in your calendar, we need your permission to write to your calendar. Granting this permission will allow you to seamlessly manage your schedule within our app.</item>
+        <item>In order to capture and upload photos or videos directly from the app, we need access to your device\'s camera. Granting this permission will enable you to share visual content and enhance your overall experience.</item>
+        <item>To simplify the process of connecting and interacting with your contacts, we require access to your contact list. Granting this permission will allow us to display and utilize contact information within our app</item>
+        <item>We need permission to write to your contacts in order to save and update information within your address book. Granting this permission will enable you to effortlessly manage your contacts through our app.</item>
+        <item>To streamline your login process and offer personalized features, we need access to your account information. Granting this permission will allow us to retrieve your associated accounts and provide a seamless login experience.</item>
+        <item>In order to provide location-based services tailored to your needs, we require access to your precise location. Granting this permission will enhance your experience by offering relevant content and personalized recommendations.</item>
+        <item>To provide location-based services and relevant content, we require access to your approximate location. Granting this permission will allow us to offer tailored experiences based on your general location.</item>
+        <item>For continuous location-based services even when the app is not in use, we need access to your location in the background. Granting this permission will enhance our ability to provide you with accurate and up-to-date location-based features.</item>
+        <item>To enable audio recording features within the app, we require access to your device\'s microphone. Granting this permission will allow you to record and share audio content seamlessly.</item>
+        <item>To enhance your app experience and provide personalized services, we need access to your device\'s phone state. Granting this permission will allow us to retrieve information such as call status and network connectivity.</item>
+        <item>To enable one-touch calling functionality within the app, we require permission to make phone calls directly. Granting this permission will allow you to initiate calls effortlessly from our app.</item>
+        <item>We need access to your call log to offer you personalized features and improve your app experience. Granting this permission will allow us to retrieve information about your call history within the app.</item>
+        <item>To provide comprehensive call management features, we require permission to write to your call log. Granting this permission will allow you to add, edit, and manage call log entries directly within our app.</item>
+        <item>We need permission to add voicemail messages on your behalf to enhance your voicemail management experience. Granting this permission will enable you to manage voicemails seamlessly within our app.</item>
+        <item>To enable internet calling and communication features, we require permission to utilize the SIP (Session Initiation Protocol) functionality on your device. Granting this permission will allow you to make and receive calls using internet-based calling services.</item>
+        <item>To enhance call management features, we need permission to monitor outgoing calls made from your device. Granting this permission will allow us to provide advanced call-related functionalities within our app.</item>
+        <item>To provide personalized health and fitness features, we require access to your device\'s body sensors. Granting this permission will allow us to collect data related to your physical activity and deliver tailored experiences within our app.</item>
+        <item>To enable SMS messaging functionality within the app, we need permission to send SMS messages on your behalf. Granting this permission will allow you to send text messages seamlessly from our app.</item>
+        <item>To provide you with a comprehensive messaging experience, we require access to your SMS messages. Granting this permission will allow us to retrieve and display your SMS conversations within our app.</item>
+        <item>To offer real-time messaging capabilities, we need permission to receive SMS messages on your device. Granting this permission will allow us to deliver incoming SMS messages directly to our app.</item>
+        <item>We need permission to receive and process WAP Push messages on your device to offer interactive and rich content features. Granting this permission will allow us to deliver multimedia messages and interactive content within our app.</item>
+        <item>To provide a complete multimedia messaging experience, we require permission to receive and display MMS messages on your device. Granting this permission will allow us to show multimedia content within our app.</item>
+        <item>To access and import files from your device\'s external storage, we require permission to read external storage. Granting this permission will allow you to effortlessly access and use files stored on your device within our app.</item>
+        <item>To save and export files to your device\'s external storage, we need permission to write to external storage. Granting this permission will allow you to save and manage files created within our app.</item>
+        <item>To enable seamless connectivity with Bluetooth devices, we require permission to connect to Bluetooth devices. Granting this permission will allow you to pair and use Bluetooth accessories within our app.</item>
+        <item>To discover nearby Bluetooth devices and establish connections, we need permission to scan for Bluetooth devices. Granting this permission will enhance your experience by enabling you to connect to compatible devices from within our app.</item>
+        <item>We need permission to advertise your device\'s presence and capabilities to nearby Bluetooth devices. Granting this permission will enable you to discover and connect with other devices using Bluetooth within our app.</item>
+        <item>To provide location-based features for media files, we require access to the location information of your media files. Granting this permission will allow us to enhance your media experience by offering location-based sorting, tagging, and organization.</item>
+        <item>To support seamless device handover and continuity features, we need permission to accept handover requests from other devices. Granting this permission will allow you to smoothly transition between different devices and continue your app experience.</item>
+        <item>To provide personalized features and insights based on your physical activity, we need permission to recognize your device\'s activity. Granting this permission will allow us to offer activity-related features and improve your overall experience.</item>
+        <item>We need permission to automatically answer incoming phone calls on your behalf. Granting this permission will allow you to handle calls seamlessly within our app.</item>
+        <item>To enhance contact-related features, we require permission to read your device\'s phone numbers. Granting this permission will allow us to display and utilize phone number information within our app.</item>
+        <item>We need permission to utilize Ultra-Wideband (UWB) technology on your device for ranging and proximity detection. Granting this permission will enable us to provide precise location and positioning features within our app.</item>
+        <item>To provide continuous monitoring of your physical activity in the background and deliver personalized health and fitness features, we require permission to access your device\'s body sensors. Granting this permission will enable us to provide you with accurate and real-time activity tracking and analysis.</item>
+        <item>To enhance your multimedia experience, we require permission to access and display images from your device\'s media library. Granting this permission will allow you to view and interact with images stored on your device within our app.</item>
+        <item>To offer a comprehensive multimedia experience, we need permission to access and play videos from your device\'s media library. Granting this permission will allow you to watch videos stored on your device within our app.</item>
+        <item>To provide a seamless audio playback experience, we require permission to access and play audio files from your device\'s media library. Granting this permission will allow you to enjoy your favorite music and audio content within our app.</item>
+        <item>To keep you updated with important information and deliver timely notifications, we need permission to post notifications on your device\'s notification center. Granting this permission will allow us to send you relevant updates and alerts through notifications.</item>
+        <item>To enhance location-based features and offer personalized recommendations, we require permission to detect nearby Wi-Fi devices. Granting this permission will allow us to provide you with localized content and tailored experiences based on Wi-Fi signals.</item>
+        <item>We need permission to access your voicemail messages to enhance your voicemail management experience. Granting this permission will enable you to view and manage your voicemail messages seamlessly within our app.</item>
+        <item>To provide comprehensive voicemail management features, we require permission to write to your voicemail system. Granting this permission will allow you to create, edit, and manage voicemail messages directly within our app.</item>
     </string-array>
 
-    <string-array name="titles">
-        <item>Camera Permission</item>
-        <item>Read Contacts Permission</item>
-        <item>Record Audio Permission</item>
-        <item>Fine Location Permission</item>
-        <item>Coarse Location Permission</item>
-        <item>Read SMS Permission</item>
-        <item>Send SMS Permission</item>
-        <item>Receive SMS Permission</item>
-        <item>Call Phone Permission</item>
+    <string-array name="permissionTitle_array">
         <item>Read Calender Permission</item>
         <item>Write Calender Permission</item>
-        <item>Read Phone State Permission</item>
-        <item>Accounts Permission</item>
+        <item>Camera Permission</item>
+        <item>Read Contacts Permission</item>
         <item>Write Contacts Permission</item>
+        <item>Accounts Permission</item>
+        <item>Fine Location Permission</item>
+        <item>Coarse Location Permission</item>
+        <item>Background Location Permission</item>
+        <item>Record Audio Permission</item>
+        <item>Read Phone State Permission</item>
+        <item>Call Phone Permission</item>
+        <item>Read Call Log Permission</item>
+        <item>Write Call Log Permission</item>
+        <item>VoiceMail Permission</item>
+        <item>SIP Permission</item>
+        <item>OutGoing Calls Permission</item>
+        <item>Body Sensors Permission</item>
+        <item>Send SMS Permission</item>
+        <item>Read SMS Permission</item>
+        <item>Receive SMS Permission</item>
+        <item>Receive WAP Permission</item>
+        <item>Receive MMS Permission</item>
+        <item>Read External Storage Permission</item>
+        <item>Write External Storage Permission</item>
+        <item>Bluetooth Connect Permission</item>
+        <item>Bluetooth Scan Permission</item>
+        <item>Bluetooth Advertise Permission</item>
+        <item>Media Location Permission</item>
+        <item>Handover Permission</item>
+        <item>Activity Recognition Permission</item>
+        <item>Answer Phone Calls Permission</item>
+        <item>Read Phone Numbers Permission</item>
+        <item>UWB Ranging Permission</item>
+        <item>Background Body Sensors Permission</item>
+        <item>Read Media Images Permission</item>
+        <item>Read Media Video Permission</item>
+        <item>Read Media Audio Permission</item>
+        <item>Post Notification Permission</item>
+        <item>Nearby WIFI Devices Permission</item>
+        <item>Read VoiceMail Permission</item>
+        <item>Write VoiceMail Permission</item>
+
     </string-array>
 
-
-    <string-array name="messages">
-        <item>Allow access to your device\'s camera to take photos and videos within the app.</item>
-        <item>This app requires Read Contacts permission to access your contacts for easy communication.</item>
-        <item>This app requires Record Audio permission to enable voice-based features for better interaction.</item>
-        <item>This app requires Fine Location permission to provide accurate location-based services.</item>
-        <item>This app requires Coarse Location permission to offer location-based features with approximate location.</item>
-        <item>This app requires access your SMS messages to provide you with relevant app features or services.</item>
-        <item>Allow the app to send SMS messages on your behalf for convenient communication.</item>
-        <item>Allow the app to receive and process incoming SMS messages for enhanced app functionality.</item>
-        <item>Enable the app to initiate phone calls directly from within the app.</item>
-        <item>This app requires access your device\'s calendar to offer scheduling and reminder features.</item>
-        <item>Grant permission to add, modify, or delete events in your device\'s calendar for better scheduling and organization.</item>
-        <item>This app requires access your device\'s phone state information for improved app performance and to provide personalized features.</item>
-        <item>Grant permission to access your device\'s accounts to enhance app integration and provide a seamless experience.</item>
-        <item>Grant permission to modify and add contacts directly from the app for a more streamlined contact management experience.</item>
+    <string-array name="permissionsId_array">
+        <item>android.permission.READ_CALENDAR</item>
+        <item>android.permission.WRITE_CALENDAR</item>
+        <item>android.permission.CAMERA</item>
+        <item>android.permission.READ_CONTACTS</item>
+        <item>android.permission.WRITE_CONTACTS</item>
+        <item>android.permission.GET_ACCOUNTS</item>
+        <item>android.permission.ACCESS_FINE_LOCATION</item>
+        <item>android.permission.ACCESS_COARSE_LOCATION</item>
+        <item>android.permission.ACCESS_BACKGROUND_LOCATION</item>
+        <item>android.permission.RECORD_AUDIO</item>
+        <item>android.permission.READ_PHONE_STATE</item>
+        <item>android.permission.CALL_PHONE</item>
+        <item>android.permission.READ_CALL_LOG</item>
+        <item>android.permission.WRITE_CALL_LOG</item>
+        <item>com.android.voicemail.permission.ADD_VOICEMAIL</item>
+        <item>android.permission.USE_SIP</item>
+        <item>android.permission.PROCESS_OUTGOING_CALLS</item>
+        <item>android.permission.BODY_SENSORS</item>
+        <item>android.permission.SEND_SMS</item>
+        <item>android.permission.READ_SMS</item>
+        <item>android.permission.RECEIVE_SMS</item>
+        <item>android.permission.RECEIVE_WAP_PUSH</item>
+        <item>android.permission.RECEIVE_MMS</item>
+        <item>android.permission.READ_EXTERNAL_STORAGE</item>
+        <item>android.permission.WRITE_EXTERNAL_STORAGE</item>
+        <item>android.permission.BLUETOOTH_CONNECT</item>
+        <item>android.permission.BLUETOOTH_SCAN</item>
+        <item>android.permission.BLUETOOTH_ADVERTISE</item>
+        <item>android.permission.ACCESS_MEDIA_LOCATION</item>
+        <item>android.permission.ACCEPT_HANDOVER</item>
+        <item>android.permission.ACTIVITY_RECOGNITION</item>
+        <item>android.permission.ANSWER_PHONE_CALLS</item>
+        <item>android.permission.READ_PHONE_NUMBERS</item>
+        <item>android.permission.UWB_RANGING</item>
+        <item>android.permission.BODY_SENSORS_BACKGROUND</item>
+        <item>android.permission.READ_MEDIA_IMAGES</item>
+        <item>android.permission.READ_MEDIA_VIDEO</item>
+        <item>android.permission.READ_MEDIA_AUDIO</item>
+        <item>android.permission.POST_NOTIFICATIONS</item>
+        <item>android.permission.NEARBY_WIFI_DEVICES</item>
+        <item>com.android.voicemail.permission.READ_VOICEMAIL</item>
+        <item>com.android.voicemail.permission.WRITE_VOICEMAIL</item>
     </string-array>
-
-
-
-
-
-
-
-
-
 
 </resources>
