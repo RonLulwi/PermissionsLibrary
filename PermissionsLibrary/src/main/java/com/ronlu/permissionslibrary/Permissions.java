@@ -20,6 +20,11 @@ public class Permissions implements ActivityCompat.OnRequestPermissionsResultCal
         this.context = context;
         this.activity = activity;
     }
+
+    public void requestPermission(PermissionType type){
+        requestPermission(new PermissionBuilder(type, activity));
+    }
+
     public void requestPermission(@NonNull PermissionBuilder builder){
         this.currentBuilder = builder;
         String permissionId = builder.getPermissionAsString();
