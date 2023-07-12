@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
     private Permissions permissions;
-    private PermissionBuilder builder;
+    private PermissionBuilder cameraBuilder;
     private AppCompatButton CAMERA, READ_CONTACTS, RECORD_AUDIO, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, READ_SMS
             , SEND_SMS, RECEIVE_SMS, CALL_PHONE, READ_CALENDAR, WRITE_CALENDAR, READ_PHONE_STATE
             , GET_ACCOUNTS, WRITE_CONTACTS;
@@ -16,11 +16,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Init Permissions using context and activity
         permissions = new Permissions(this, this);
-        builder = new PermissionBuilder(PermissionType.CAMERA,this)
-                .setTitle("hi")
-                .setRationaleMessage("65656565")
-                .setPositiveDialogButton("5656");
+        // Init and modify PermissionBuilder with PermissionType enum class and activity
+        cameraBuilder = new PermissionBuilder(PermissionType.CAMERA,this);
+        // Set your builder attributes for custom alert dialog display
+        cameraBuilder.setTitle("Custom title")
+                .setRationaleMessage("Custom rational message")
+                .setPositiveDialogButton("Custom positive button")
+                .setNegativeDialogButton("Custom negative button")
+                .setGrantManualPermissionMessage("Custom message");
+
         findViews();
         initViews();
     }
@@ -43,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void initViews() {
-        CAMERA.setOnClickListener(v -> permissions.requestPermission(builder));
+        // Use the Library with custom builder.
+        CAMERA.setOnClickListener(v -> permissions.requestPermission(cameraBuilder));
+        // Use the Library with hard coded alert dialog messages.
+
         READ_CONTACTS.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.READ_CONTACTS, this)));
         RECORD_AUDIO.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.RECORD_AUDIO, this)));
         ACCESS_FINE_LOCATION.setOnClickListener(v -> permissions.requestPermission(new PermissionBuilder(PermissionType.ACCESS_FINE_LOCATION, this)));
