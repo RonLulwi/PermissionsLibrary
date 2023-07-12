@@ -26,24 +26,40 @@ To use the Permissions Library, follow the steps outlined below:
         .setNegativeDialogButton("Custom negative button")
         .setGrantManualPermissionMessage("Custom message");
    ```
-4. Use the library with a custom builder
+4. Override onRequestPermissionsResult and call permissions.onRequestPermissionsResult:
+   ```java
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        this.permissions.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+   ```  
+5. Use the library with a custom builder
    ```java
    CAMERA.setOnClickListener(v -> permissions.requestPermission(cameraBuilder));
    ```
 
 ### Hardcoded AlertDialog Messages
 1. Declare the necessary variables
-  ```java
-  Permissions permissions;
-  ```
+   ```java
+   Permissions permissions;
+   ```
 2. Initialize Permissions using the context and activity
-  ```java
-  permissions = new Permissions(this, this);
-  ```
-3. Use the library with hardcoded AlertDialog messages
-  ```java
-  READ_CONTACTS.setOnClickListener(v -> permissions.requestPermission(PermissionType.READ_CONTACTS));
-  ```
+   ```java
+   permissions = new Permissions(this, this);
+   ```
+3. Override onRequestPermissionsResult and call permissions.onRequestPermissionsResult:
+   ```java
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        this.permissions.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+   ```
+4. Use the library with hardcoded AlertDialog messages
+   ```java
+   READ_CONTACTS.setOnClickListener(v -> permissions.requestPermission(PermissionType.READ_CONTACTS));
+   ```
 
 By following these steps, you can easily integrate the Permissions Library into your Android application and handle user permissions efficiently. You can choose either the custom AlertDialog display approach or the hardcoded AlertDialog messages approach, depending on your specific requirements
 
